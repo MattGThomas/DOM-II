@@ -19,8 +19,8 @@
 <body>
 
   <header class="main-navigation">
-    <div class="container nav-container">
-      <h1 class="logo-heading">Fun Bus</h1>
+    <div class="container nav-container" class='dropzone'>
+      <h1 class="logo-heading" id='draggable' draggable='true' ondragstart="event.dataTransfer.setData('text/plain',null)">Fun Bus</h1>
       <nav class="nav">
         <a class="nav-link" href="#">Home</a>
         <a class="nav-link" href="#">About Us</a>
@@ -81,6 +81,9 @@
       </div>
     </section>
   </div><!-- container -->
+  <div class='dropzone'>
+
+  </div>
 
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
