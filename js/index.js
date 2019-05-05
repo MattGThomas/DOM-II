@@ -1,10 +1,12 @@
 // Your code goes here
 
-/*----Navigation Link Mouseover----*/
-const navLink = document.querySelector('.nav-link');
-navLink.addEventListener('mouseover', function(e){
-    navLink.style.color = 'red';
-});
+/*----prevent default----*/
+const navLink = document.querySelectorAll('.nav-link');
+for(let i=0 ; i<=3 ; i++){
+    navLink[i].addEventListener('click', function(e){
+        e.preventDefault();
+    })
+};
 
 /*----Button 1 Size Changer----*/
 const button = document.querySelector('.btn');
@@ -43,3 +45,19 @@ function reportWindowSize() {
   widthOutput.textContent = window.innerWidth;
 }
 window.onresize = reportWindowSize;
+
+/*------Drag------*/
+const logoHeading = document.querySelector('.logo-heading');
+logoHeading.addEventListener('drag', () =>{
+    console.log('If you could not drag me that would be cool')
+});
+
+/*-------Scrolling------*/
+window.addEventListener('scroll', () => {
+    console.log('You scrolled through the page')
+});
+
+/*------Keypress------*/
+window.addEventListener('keypress', () => {
+    alert('You literlly can not do anything here by pressing keys')
+})
